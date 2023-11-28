@@ -12,3 +12,8 @@ main:
     li $v0, 4               # syscall 4 for print_str
     la $a0, prompt1         # load address of prompt1
     syscall 
+
+input_loop:
+    li $v0, 5               # syscall 5 for read_int
+    syscall
+    move $t0                # store N in $t0
