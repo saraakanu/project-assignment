@@ -22,3 +22,9 @@ input_loop:
     blez $t0, illegal_number # if N less than or equal to 0, branch to illegal_number
     li $t1, 25              # load immediate 25
     blt $t0, $t1, illegal_number # if N is less than 25, branch to illegal_number
+    
+    li $t2, 0               # initialize first Fibonacci number
+    li $t3, 1               # initialize second Fibonacci number
+    move $t4, $t0           # counter for loop (N)
+
+    fib_loop:
