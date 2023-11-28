@@ -8,3 +8,7 @@ newline:  .asciiz "\n"
    .globl main
 
 main:
+    # Step 1: Prompt user for N 
+    li $v0, 4               # syscall 4 for print_str
+    la $a0, prompt1         # load address of prompt1
+    syscall 
