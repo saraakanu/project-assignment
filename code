@@ -1,0 +1,5 @@
+    .data
+prompt 1: .asciiz "Enter a number (N >=25): "
+error:    .asciiz "Illegal Number!\n"
+fib_msg:  .asciiz "The Fibonacci sequence: \n"
+newline:  .asciiz "\n"
