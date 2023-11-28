@@ -28,3 +28,8 @@ input_loop:
     move $t4, $t0           # counter for loop (N)
 
     fib_loop:
+        li $v0, 1           # syscall 1 for print integer
+        move $a0, $t2       # load current Fibonacci number
+        syscall             
+
+        add $t5, $t2, $t3   # $t5 = $t2 + $t3
