@@ -17,3 +17,8 @@ input_loop:
     li $v0, 5               # syscall 5 for read integer
     syscall
     move $t0                # store N in $t0
+   
+    # Check if N is legal (N >= 25)
+    blez $t0, illegal_number # if N less than or equal to 0, branch to illegal_number
+    li $t1, 25              # load immediate 25
+    blt $t0, $t1, illegal_number # if N is less than 25, branch to illegal_number
